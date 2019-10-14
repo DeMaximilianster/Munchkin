@@ -41,3 +41,19 @@ class Treasure(Card):
 
 class OneTime(Card):
     pass
+
+
+class Monster(Card):
+    def __init__(self, func=None):
+        Card.__init__(self)
+        self.indecency = func
+        self.level = int()
+        self.level_reward = int()
+        self.treasure_reward = int()
+
+        self.ignorance = dict()  # Манчины, которых монстр не трогает (хмм, или лучше сделать лямбда-функцией)
+        self.ignorance_special = None  # Особый эффект для игнорируемых Манчкинов (смотри карту "Амазонка")
+
+
+class Undead(Monster):
+    pass

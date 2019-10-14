@@ -14,3 +14,5 @@ def test(message):
 
 logger.setLevel("DEBUG")
 bot.polling()
+
+# Тестовое изменение

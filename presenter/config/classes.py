@@ -24,23 +24,31 @@ class Munchkin:
 
 class Card:
     def __init__(self):
-        pass
+        self.card_pic = str()
 
 
 class Race(Card):
-    pass
+    def __init__(self, func=None):
+        Card.__init__(self)
+        self.leave_bonus = int()
+        self.skill = func
 
 
 class Role(Card):
-    pass
+    def __init__(self, func_1=None, func_2=None):
+        Card.__init__(self)
+        self.skill_1 = func_1
+        self.skill_2 = func_2
 
 
 class Treasure(Card):
-    pass
+    def __init__(self):
+        Card.__init__(self)
+        self.price = int()
+        self.type = str()
+        self.bonus = int()
 
-
-class OneTime(Card):
-    pass
+        self.one_time = bool()
 
 
 class Monster(Card):
@@ -53,7 +61,4 @@ class Monster(Card):
 
         self.ignorance = dict()  # Манчины, которых монстр не трогает (хмм, или лучше сделать лямбда-функцией)
         self.ignorance_special = None  # Особый эффект для игнорируемых Манчкинов (смотри карту "Амазонка")
-
-
-class Undead(Monster):
-    pass
+        self.is_undead = bool()
